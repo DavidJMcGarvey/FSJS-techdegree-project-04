@@ -15,9 +15,9 @@ class Game {
    */
   createPhrases() {
     const phrases = [
-      new Phrase('This is a phrase.'),
-      new Phrase('This is also a phrase.'),
-      new Phrase('This is yet another phrase.'),
+      new Phrase('easy peasy lemon squeezy'),
+      new Phrase('an apple a day keeps the apple business profitable'),
+      new Phrase('jingle bells batman smells'),
       new Phrase('This is almost a phrase.'),
       new Phrase('This is not phrase.')
     ];
@@ -28,8 +28,14 @@ class Game {
     console.log('DAVE!! Good to see you in here again!');
   }
 
+  /**
+   * Selects randome phrase from phrases property
+   * @return (Object) Phrase object chosed to be used
+   */
   getRandomPhrase() {
-
+    let randomPhrase = this.phrases[Math.floor(Math
+      .random() * this.phrases.length)];
+    return randomPhrase;
   }
 
   handleInteraction() {
