@@ -24,8 +24,17 @@ class Game {
     return phrases;
   }
 
+  /**
+   * Begins game by selecting random phrase and displaying it to user
+   */
   startGame() {
-    console.log('DAVE!! Good to see you in here again!');
+    // hide screen overlay
+    const overlay = document.querySelector('#overlay');
+    overlay.style.display = 'none';
+    // call getRandomPhrase() to get phrase from array, store in activePhrase
+    this.activePhrase = this.getRandomPhrase();
+    // add the phrase to gameboard w/ addPhraseToDisplay()
+    this.activePhrase.addPhraseToDisplay();
   }
 
   /**

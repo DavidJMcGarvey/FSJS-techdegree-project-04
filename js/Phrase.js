@@ -14,9 +14,9 @@ class Phrase {
     const phraseLetters = this.phrase.split('');
     for (let i = 0; i < phraseLetters.length; i++) {
       const letterBlock = document.createElement('li');
-      if (i === ' ') {
+      if (phraseLetters[i] === ' ') {
         letterBlock.textContent = phraseLetters[i];
-        letterBlock.className = `space`;
+        letterBlock.className = 'space';
       } else {
         letterBlock.textContent = phraseLetters[i];
         letterBlock.className = `hide letter ${phraseLetters[i]}`;
