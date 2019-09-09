@@ -16,10 +16,10 @@ class Game {
   createPhrases() {
     const phrases = [
       new Phrase('easy peasy lemon squeezy'),
-      new Phrase('an apple a day keeps the apple business profitable'),
-      new Phrase('jingle bells batman smells'),
-      new Phrase('This is almost a phrase.'),
-      new Phrase('This is not phrase.')
+      new Phrase('apple of my eye'),
+      new Phrase('down to the wire'),
+      new Phrase('rome was not built in a day'),
+      new Phrase('too many cooks in the kitchen')
     ];
     return phrases;
   }
@@ -47,19 +47,35 @@ class Game {
     return randomPhrase;
   }
 
+  /**
+   * method for calling other methods to get game going
+   */
   handleInteraction() {
 
   }
 
+  /**
+   * Increases the value of the missed property
+   * Removes a life from the scorebaord
+   * Checks if player has remaining lives and ends game if player is out
+   */
   removeLife() {
 
   }
 
+  /**
+   * Checks for winning move
+   * @return (boolean) True is game has been won, false if loss
+   */
   checkForWin() {
 
   }
 
-  gameOver() {
+  /**
+   * Displays game over message
+   * @param (boolean) gameWon - Whether or not the user won the game
+   */
+  gameOver(gameWon) {
 
   }
 

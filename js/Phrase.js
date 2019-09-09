@@ -25,12 +25,33 @@ class Phrase {
     }
   }
 
-  checkLetter() {
-
+  /**
+   * Checks if passed letter is in phrase
+   * @param (string) letter - Letter to check
+   */
+  checkLetter(letter) {
+    const phraseLetters = this.phrase.split('');
+    const activeLetter = document.querySelector(`li.hide.letter.${letter}`);
+    console.log(activeLetter);
+    console.log(letter);
+    if (activeLetter) {
+      console.log('Dave!!');
+      return true;
+    } else {
+    return false;
+    }
   }
 
-  showMatchedLetter() {
-
+  /**
+   * Displays passed letter on screen after a match is found
+   * @param (string) letter - Letter to display
+   */
+  showMatchedLetter(letter) {
+    if (this.checkLetter(letter)) {
+      console.log('letter matches!!');
+      console.log(this.phrase);
+      // this.className = `show letter ${letter}`;
+    }
   }
 
 
