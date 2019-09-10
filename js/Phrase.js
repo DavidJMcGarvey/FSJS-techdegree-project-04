@@ -5,7 +5,8 @@
 class Phrase {
   constructor(phrase) {
     this.phrase = phrase;
-}
+  }
+  
   /**
    * Display phrase on game scoreboard
    */
@@ -32,13 +33,11 @@ class Phrase {
   checkLetter(letter) {
     const phraseLetters = this.phrase.split('');
     const activeLetter = document.querySelector(`li.hide.letter.${letter}`);
-    console.log(activeLetter);
-    console.log(letter);
     if (activeLetter) {
-      console.log('Dave!!');
       return true;
     } else {
-    return false;
+      // lose a heart here?
+      return false;
     }
   }
 
@@ -47,12 +46,10 @@ class Phrase {
    * @param (string) letter - Letter to display
    */
   showMatchedLetter(letter) {
+    const activeLetter = document.querySelector(`li.hide.letter.${letter}`);
     if (this.checkLetter(letter)) {
-      console.log('letter matches!!');
-      console.log(this.phrase);
-      // this.className = `show letter ${letter}`;
+      activeLetter.className = `show letter ${letter}`;
     }
   }
-
 
 }
