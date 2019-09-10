@@ -60,7 +60,8 @@ class Game {
    * Checks if player has remaining lives and ends game if player is out
    */
   removeLife() {
-
+    this.missed += 1;
+    
   }
 
   /**

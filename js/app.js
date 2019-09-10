@@ -15,5 +15,4 @@ document.querySelector('#qwerty').addEventListener('click',  (e)=>{
   if (e.target.type === 'submit') {
     phrase.showMatchedLetter(e.target.textContent);
   }
-
 });

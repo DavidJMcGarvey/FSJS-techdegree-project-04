@@ -6,7 +6,7 @@ class Phrase {
   constructor(phrase) {
     this.phrase = phrase;
   }
-  
+  8
   /**
    * Display phrase on game scoreboard
    */
@@ -46,9 +46,11 @@ class Phrase {
    * @param (string) letter - Letter to display
    */
   showMatchedLetter(letter) {
-    const activeLetter = document.querySelector(`li.hide.letter.${letter}`);
+    const activeLetter = document.querySelectorAll(`li.hide.letter.${letter}`);
     if (this.checkLetter(letter)) {
-      activeLetter.className = `show letter ${letter}`;
+      for (let i = 0; i < activeLetter.length; i++) {
+        activeLetter[i].className = `show letter ${letter}`;
+      }
     }
   }
 
