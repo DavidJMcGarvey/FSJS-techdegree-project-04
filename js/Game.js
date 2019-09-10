@@ -61,7 +61,7 @@ class Game {
    */
   removeLife() {
     this.missed += 1;
-    
+
   }
 
   /**
@@ -69,6 +69,20 @@ class Game {
    * @return (boolean) True is game has been won, false if loss
    */
   checkForWin() {
+    const activeLetters = this.activePhrase.phrase.split('');
+    const selectedLetter = document.querySelectorAll(`li.show.letter`);
+
+    for (let i = 0; i < activeLetters.length; i++) {
+      if (activeLetters[i] === ' ') {
+        activeLetters.pop(activeLetters[i]);
+      }
+    }
+
+    for (let i = 0; i < activeLetters.length; i++) {
+      if (selectedLetter.length === activeLetters.length) {
+        return true;
+      }
+    }
 
   }
 

@@ -31,7 +31,6 @@ class Phrase {
    * @param (string) letter - Letter to check
    */
   checkLetter(letter) {
-    const phraseLetters = this.phrase.split('');
     const activeLetter = document.querySelector(`li.hide.letter.${letter}`);
     if (activeLetter) {
       return true;
