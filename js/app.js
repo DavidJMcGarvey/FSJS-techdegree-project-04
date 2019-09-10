@@ -14,6 +14,5 @@ document.querySelector('#btn__reset').addEventListener('click', ()=>{
 document.querySelector('#qwerty').addEventListener('click',  (e)=>{
   if (e.target.type === 'submit') {
     phrase.showMatchedLetter(e.target.textContent);
-    game.checkForWin();
   }
 });

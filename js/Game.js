@@ -48,10 +48,11 @@ class Game {
   }
 
   /**
-   * method for calling other methods to get game going
+   * Method for calling other methods to get game going
+   * Will handle disabling chosen letters so user cannot repeat guess
    */
-  handleInteraction() {
-
+  handleInteraction(button) {
+    console.log(button);
   }
 
   /**
@@ -61,6 +62,10 @@ class Game {
    */
   removeLife() {
     this.missed += 1;
+    const hearts = document.querySelectorAll('li.tries');
+    for (let i = 0; i < this.missed; i++) {
+      hearts[i].innerHTML = '<img src="images/lostHeart.png" alt="Heart Icon" height="35" width="30">';
+    }
 
   }
 
@@ -81,6 +86,8 @@ class Game {
     for (let i = 0; i < activeLetters.length; i++) {
       if (selectedLetter.length === activeLetters.length) {
         return true;
+      } else {
+        return false;
       }
     }
 
@@ -91,7 +98,16 @@ class Game {
    * @param (boolean) gameWon - Whether or not the user won the game
    */
   gameOver(gameWon) {
-
+    const overlay = document.querySelector('#overlay');
+    const overlayDiv = document.querySelector('#game-over-message');
+    if (gameWon) {
+      overlayDiv.textContent = 'You won!!!'
+      overlay.className = 'win';
+    } else {
+      overlayDiv.textContent = 'You lost :('
+      overlay.className = 'lose';
+    }
+    overlay.style.display = 'block';
   }
 
 }

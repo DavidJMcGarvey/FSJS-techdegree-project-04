@@ -6,7 +6,7 @@ class Phrase {
   constructor(phrase) {
     this.phrase = phrase;
   }
-  8
+
   /**
    * Display phrase on game scoreboard
    */
@@ -35,7 +35,6 @@ class Phrase {
     if (activeLetter) {
       return true;
     } else {
-      // lose a heart here?
       return false;
     }
   }
