@@ -2,12 +2,23 @@
  * Project 4 - OOP Game App
  * app.js */
 
-const game = new Game();
-const randomPhrase = game.getRandomPhrase();
-const phrase = new Phrase(randomPhrase.phrase);
+let game;
+let randomPhrase;
+let phrase;
+const startButton = document.querySelector('#btn__reset');
 
-document.querySelector('#btn__reset').addEventListener('click', ()=>{
+startButton.addEventListener('click', ()=>{
+  game = new Game();
   game.startGame();
+  randomPhrase = game.getRandomPhrase();
+  phrase = new Phrase(randomPhrase.phrase);
+  if (startButton.value === 'play_again') {
+    game.resetGame();
+    game = new Game();
+    game.startGame();
+    randomPhrase = game.getRandomPhrase();
+    phrase = new Phrase(randomPhrase.phrase);
+  }
   console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
 });
 
