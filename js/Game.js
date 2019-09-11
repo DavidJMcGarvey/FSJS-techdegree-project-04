@@ -35,6 +35,11 @@ class Game {
     this.activePhrase = this.getRandomPhrase();
     // add the phrase to gameboard w/ addPhraseToDisplay()
     this.activePhrase.addPhraseToDisplay();
+    // Add value attr to qwerty button elements
+    const keyButtons = document.querySelectorAll(`button.key`);
+    for (let i = 0; i < keyButtons.length; i++) {
+      keyButtons[i].value = keyButtons[i].textContent;
+    }
   }
 
   /**
@@ -52,7 +57,29 @@ class Game {
    * Will handle disabling chosen letters so user cannot repeat guess
    */
   handleInteraction(button) {
-    console.log(button);
+    const keyButton = document.querySelector(`button[value="${button}"]`);
+    const activeLetters = this.activePhrase.phrase.split('');
+    const selectedLetter = document.querySelectorAll(`li.show.letter`);
+
+    phrase.showMatchedLetter(button);
+
+    if (activeLetters.includes(keyButton.value)) {
+      keyButton.className = 'chosen';
+      keyButton.disabled = true;
+      if (this.checkForWin()) {
+        this.gameOver(true);
+      }
+    } else {
+      keyButton.className = 'wrong';
+      keyButton.disabled = true;
+      this.removeLife();
+      // this.checkForWin();
+    }
+
+    if (this.missed === 5) {
+      this.gameOver(this.checkForWin());
+    }
+
   }
 
   /**
@@ -66,7 +93,6 @@ class Game {
     for (let i = 0; i < this.missed; i++) {
       hearts[i].innerHTML = '<img src="images/lostHeart.png" alt="Heart Icon" height="35" width="30">';
     }
-
   }
 
   /**
@@ -90,7 +116,6 @@ class Game {
         return false;
       }
     }
-
   }
 
   /**
