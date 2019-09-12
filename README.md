@@ -8,6 +8,7 @@ object-oriented programing!
 
 
 **BASIC FEATURES**
+This browser game uses object oriented programing to present a fun little phrase guessing game.
 - LALALA - Lalalala
   1. Tada
   2. Dooda
@@ -18,4 +19,4 @@ object-oriented programing!
 
 Author: David J McGarvey
 Created: 2019-09-06
-Updated: 2019-09-09
+Updated: 2019-09-11

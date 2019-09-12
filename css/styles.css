@@ -134,12 +134,12 @@ button {
   background: #3a3f58;
   border-radius: 5px;
   font-size: var(--font-size-medium);
-  color: #FFFFFF;
+  color: green;
 }
 
 .wrong {
   background: #f7a964;
-  color: #FFFFFF;
+  color: darkblue;
 }
 
 .btn__reset {
@@ -154,11 +154,14 @@ button {
 }
 
 .btn__reset:active {
-  padding: 14px 16px 16px 14px;
+  padding: 104px 106px 160px 104px;
   border-bottom: solid 4px rgba(0, 0, 0, 0);
   border-right: solid 3px rgba(0, 0, 0, 0);
 }
 
+#qwerty {
+  background-color: royalblue;
+}
 
 /* Overlay */
 

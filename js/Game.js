@@ -93,11 +93,10 @@ class Game {
       if (this.checkForWin()) {
         this.gameOver(true);
       }
-    } else {
+    } else if (activeLetters.includes(keyButton.value) === false) {
       keyButton.className = 'wrong';
       keyButton.disabled = true;
       this.removeLife();
-      // this.checkForWin();
     }
 
     if (this.missed === 5) {
