@@ -12,7 +12,7 @@ object-oriented programing!
 This browser game uses object oriented programing to present a fun little
 phrase guessing game. Using JavaScript **classes**, this app uses a **Game**
 class and a **Phrase** class to build a random phrase and render it to screen
-as blank tiles. The player can user the supplied onscreen keyboard to make
+as blank tiles. The player can use the supplied onscreen keyboard to make
 guesses as to how to spell the hidden phrase. The player has 5 guesses to
 complete the game. The following are the methods (and any parameters) for each
 class that are used to make the classes interact correctly:
