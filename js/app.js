@@ -23,7 +23,7 @@ startButton.addEventListener('click', ()=>{
     randomPhrase = game.getRandomPhrase();
     phrase = new Phrase(randomPhrase.phrase);
   }
-  console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
+  console.log(`No peaking! Alright, here you go: ${game.activePhrase.phrase}`);
 });
 
 // Event listener on onbaord qwerty keyboard
@@ -34,7 +34,7 @@ qwertyKeyBoard.addEventListener('click', (e)=>{
   }
 });
 
-// Exceeds Feature: Players can use physical keyboard if they choose
+// EXCEEDS Feature: Players can use physical keyboard if they choose
 qwertyKeyBoard.tabIndex = -1;
 
 qwertyKeyBoard.addEventListener('keydown', (e) => {
@@ -45,6 +45,9 @@ qwertyKeyBoard.addEventListener('keydown', (e) => {
       e.preventDefault();
       qwertyKeyBoard.focus();
       game.handleInteraction(e.key);
+      if (game.checkForWin()) {
+        game.gameOver(true);
+      }
     }
   }
 });

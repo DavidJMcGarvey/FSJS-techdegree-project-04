@@ -149,16 +149,19 @@ class Game {
     const overlay = document.querySelector('#overlay');
     const overlayDiv = document.querySelector('#game-over-message');
     const startButton = document.querySelector('#btn__reset');
+    const startMessage = document.querySelector('.title');
     if (gameWon) {
       overlayDiv.textContent = 'You won!!!';
       overlay.className = 'win';
       startButton.value = 'play_again';
       startButton.textContent = 'Play Again';
+      startMessage.className = 'title winning';
     } else {
       overlayDiv.textContent = 'You lost :(';
       overlay.className = 'lose';
       startButton.textContent = 'Play Again';
       startButton.value = 'play_again';
+      startMessage.className = 'title not_winning';
     }
     overlay.style.display = 'block';
   }
