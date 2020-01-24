@@ -1,11 +1,11 @@
 -----------------------------------------
-###         OOP Game Show App         ###
+#         OOP Game Show App         #
 -----------------------------------------
 
 Welcome to the Game Show where you come for the word play, but stay for the
 object-oriented programing!
 
-*Application Description and Goals:* 
+## Application Description and Goals:
 
 **BASIC FEATURES**
 
@@ -44,17 +44,17 @@ Phrase Hunter**! The difference is this one has the name 'Davey' added to the
 title! Also, the keyboard color effects and background colors are unique to
 this edition. CSS is neat. Enjoy!
 
-*Technologies:*
+## Technologies:
 
 1. JavaScript
 2. Object-Oriented Programing
 3. Event Handling
 
-*Screenshots:*
+## Screenshots:
 ![img](https://user-images.githubusercontent.com/42125523/72556132-daf22f00-3852-11ea-8c77-6d2b1312d352.png)
 ![img](https://user-images.githubusercontent.com/42125523/72556133-daf22f00-3852-11ea-8385-be51f24e1147.png)
 ![img](https://user-images.githubusercontent.com/42125523/72556134-daf22f00-3852-11ea-9980-c755d60ae3e2.png)
 
 Author: David J McGarvey  
 Created: 2019-09-06  
-Updated: 2020-01-16  
+Updated: 2020-01-24
